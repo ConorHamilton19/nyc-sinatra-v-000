@@ -14,7 +14,8 @@ class FiguresController < ApplicationController
     if !params["title"]["name"].empty?
       @figure.title << Title.create(params[:title])
     end 
-    if !
+    if !params["landmark"]["name"].empty?
+      @
   
   end 
 end
