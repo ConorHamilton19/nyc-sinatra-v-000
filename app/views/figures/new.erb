@@ -13,11 +13,13 @@
    
    <h4>Landmarks</h4>
   <% Landmark.all.each do |landmark| %>
-   <p><input <%= landmark.name %> type="checkbox" id="landmark_<%= landmark.id %>" name="figure[title_ids][]" value="<%= title.id %>"></p>
+   <p><input <%= landmark.name %> type="checkbox" id="landmark_<%= landmark.id %>" name="figure[landmark_ids][]" value="<%= landmark.id %>"></p>
   <%end%>
   
-  <h4>Create New Title:</h4>
-   <p> <input type="text" name="title[name]" id="title_name"></p>
+  <h4>Create New Landmark:</h4>
+   <p> <input type="text" name="landmark[name]" id="landmark_name"></p>
+   
+   <input type="submit" value="Create New Figure">
   
 </form>
 
