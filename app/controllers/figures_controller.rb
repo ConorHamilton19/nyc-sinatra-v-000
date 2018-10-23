@@ -11,7 +11,7 @@ class FiguresController < ApplicationController
   
   post '/figures'
     @figure = Figure.create(params[:figure])
-    if 
+    if !params[]
   
   end 
 end
