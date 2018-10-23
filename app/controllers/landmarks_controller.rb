@@ -11,11 +11,11 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
 
-    if !params[:title][:name].empty?
+    if !params["title"]["name"].empty?
       @landmark.titles << Title.create(params[:title])
     end
 
-    if !params[:figure][:name].empty?
+    if !params["figure"]["name"].empty?
       @landmark.figure << Figure.create(params[:figure])
     end
 
