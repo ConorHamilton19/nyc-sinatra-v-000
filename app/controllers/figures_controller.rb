@@ -1,4 +1,5 @@
 class FiguresController < ApplicationController
   
-  get '/'
+  get '/figures' do 
+    erb :"f"
 end
