@@ -22,4 +22,8 @@ class FiguresController < ApplicationController
     redirect :"/figures/#{@figure.id}"
   
   end 
+  
+  get '/figures/:id' do 
+    @figure = Figure.find_by_id()
+  end 
 end
