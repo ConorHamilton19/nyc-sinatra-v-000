@@ -1,7 +1,11 @@
 <h2>Create New Figure</h2>
 
 <form method="POST" action="/figures">
-  Name:<input type="text" name="figure_name" id> 
+ <p> Name:<input type="text" name="figure[name]" id="figure_name"> </p>
+ <br>
+ <h4>Titles</h4>
+ <% Title.all.each do |title| %>
+ <%= title.name %>
 </form>
 
 <a class="button" href="/figures">Landmarks</a>
