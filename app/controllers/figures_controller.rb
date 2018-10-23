@@ -38,11 +38,11 @@ class FiguresController < ApplicationController
     @figure = Figure.find_by_id(params[:id])
     @figure.update(params[:figure])
 
-    unless params[:title][:name].empty?
+    unless params["title"]["name"].empty?
       @figure.titles << Title.create(params[:title])
     end
 
-    unless params[:landmark][:name].empty?
+    unless params["landmark"]["name"].empty?
       @figure.landmarks << Landmark.create(params[:landmark])
     end
     
