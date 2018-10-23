@@ -9,7 +9,7 @@ class FiguresController < ApplicationController
     erb :"/figures/new"
   end 
   
-  post '/figures'
+  post '/figures' do
     @figure = Figure.create(params[:figure])
     if !params["title"]["name"].empty?
       @figure.title << Title.create(params[:title])
