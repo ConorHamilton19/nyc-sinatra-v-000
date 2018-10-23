@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
   post '/figures'
     @figure = Figure.create(params[:figure])
     if !params["title"]["name"].empty?
-      @figure.title = 
+      @figure.title = Title.create
   
   end 
 end
